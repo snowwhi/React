@@ -6,9 +6,19 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(10)
    let Add_value=()=>{
+    // interview perspective Question
+
     if (count==20) {
       setCount(count)
     }else{
+     //setCount(count+1)
+     // setCount(count+1)
+     // what will be the output
+     // obviously one time updation why fiber ui updation
+     //so inorder to atually increase the value
+     // use Call bak function of the counter
+     setCount(preCounter => preCounter+1)
+     // Batch execution   
     setCount(count+1)    
    }}
    let Remove_Value=()=>{
